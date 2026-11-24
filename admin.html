@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0a1f">
+  <title>Studio Dashboard | MoHegab Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#admin-main">Skip to dashboard</a>
+  <header class="header">
+    <a href="index.html" class="logo" aria-label="MoHegab Studio home">
+      <img src="images/logo.jpg" alt="">
+      <span class="logo-name">MoHegab<span>Studio</span></span>
+    </a>
+    <a href="index.html" class="text-link">Back to website</a>
+  </header>
+
+  <main id="admin-main" class="admin-shell">
+    <span class="eyebrow">Private area</span>
+    <h1>Review dashboard</h1>
+    <p>Approve reviews before they appear publicly, or delete anything you do not want to keep.</p>
+
+    <form id="admin-login" class="admin-card admin-login">
+      <label>
+        Email
+        <input name="email" type="email" autocomplete="username" required>
+      </label>
+      <label>
+        Password
+        <input name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <button class="btn" type="submit">Sign in</button>
+      <p id="admin-login-status" class="admin-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <section id="admin-panel" hidden>
+      <div class="admin-toolbar">
+        <h2>Submitted reviews</h2>
+        <button id="admin-logout" class="btn btn-outline" type="button">Sign out</button>
+      </div>
+      <p id="admin-panel-status" class="admin-status" role="status" aria-live="polite"></p>
+      <div id="admin-review-list" class="admin-review-list"></div>
+    </section>
+  </main>
+
+  <script src="supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
